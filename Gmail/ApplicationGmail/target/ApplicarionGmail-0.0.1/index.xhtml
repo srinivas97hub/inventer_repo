@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Mail Example</title>
+</h:head>
+<h:body>
+	<h:form id="form" styleclass="form" enctype="multipart/form-data">
+		<h:panelGrid columns="2">
+                
+                To:
+                <h:panelGroup>
+				<h:inputText size="35" id="name" value="#{sendMail.to}"
+					required="true" requiredMessage="Required" />
+				<h:message for="name" style="color:red" />
+			</h:panelGroup>
+                
+                Subject:
+                <h:panelGroup>
+				<h:inputText size="25" id="subject" value="#{sendMail.sub}"
+					required="true" requiredMessage="Required" />
+				<h:message for="subject" style="color:red" />
+			</h:panelGroup>
+                
+                Message:
+                <h:panelGroup>
+				<h:inputTextarea cols="45" rows="15" id="message"
+					value="#{sendMail.msg}" required="true" requiredMessage="Required" />
+				<h:message for="message" style="color:red" />
+			</h:panelGroup>
+                AttchFile:
+                <h:panelGroup>
+				<h:inputFile id="file-id" value="#{sendMail.file}"  styleclass="inputfile"  required="false"
+					requiredMessage="Please upload a file" alt="upload file" />
+			</h:panelGroup>
+			<h:commandButton value="Send" action="#{sendMail.SentMail()}"
+				onclick="submitForm()" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
