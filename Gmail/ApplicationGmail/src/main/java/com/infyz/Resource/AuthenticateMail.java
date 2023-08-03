@@ -23,7 +23,7 @@ import javax.mail.internet.MimeMultipart;
 public class AuthenticateMail {
 	public void sendMail(String recepient,String subject,String text,String file) {
 		Properties properties =new Properties();
-		properties.put("mail.smtp.user", "srinivas.t@infyzterminals.com");
+		properties.put("mail.smtp.user", "srinivas.t@xxxxxxxx.com");
 		properties.put("mail.smtp.password", "logica@d7");;
 		properties.put("mail.smtp.auth","true");
 		properties.put("mail.smtp.host", "smtp.gmail.com");
@@ -33,7 +33,7 @@ public class AuthenticateMail {
 		properties.setProperty("mail.smtp.ssl.enable", "false");
 		properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
 		properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-		String myAccMail="srinivas.t@infyzterminals.com";
+		String myAccMail="srinivas.t@xxxxxxxxxxx.com";
 		String myPw="XXXXXXXXXXXX";
 		Session session=Session.getInstance(properties,new Authenticator() {
 			@Override
