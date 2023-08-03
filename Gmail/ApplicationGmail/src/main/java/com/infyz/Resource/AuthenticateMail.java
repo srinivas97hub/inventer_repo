@@ -34,7 +34,7 @@ public class AuthenticateMail {
 		properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
 		properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		String myAccMail="srinivas.t@infyzterminals.com";
-		String myPw="logica@d7";
+		String myPw="XXXXXXXXXXXX";
 		Session session=Session.getInstance(properties,new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
